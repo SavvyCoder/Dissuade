@@ -5,22 +5,32 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client-install": "npm install --prefix client",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run client\" \"npm run server\""
   },
   "author": "Savinda G",
   "license": "ISC",
   "dependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "bcrypt": "^3.0.0",
     "bcryptjs": "^2.4.3",
+    "concurrently": "^4.0.1",
     "express": "^4.16.3",
     "gravatar": "^1.6.0",
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.2.9",
+    "npm": "^6.4.1",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
+    "prettier": "^1.14.2",
     "validator": "^10.6.0"
   },
   "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "nodemon": "^1.18.3"
   }
 }
