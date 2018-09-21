@@ -4,6 +4,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const path = require("path");
+const secure = require("express-force-https");
 
 const users = require("./routes/api/users.js");
 const posts = require("./routes/api/posts.js");
@@ -15,6 +16,9 @@ const db = require("./config/keys").mongoURI;
 //body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+//Ensure https redirect
+app.use(secure);
 
 mongoose
   .connect(db)
@@ -32,13 +36,9 @@ app.use("/api/users", users);
 app.use("/api/posts", posts);
 app.use("/api/profile", profile);
 
-app.get("http://:request", (res, req) => {
-  res.redirect("https://dissuade.io");
-});
-
-app.get("www.dissuade.io", (res, req) => {
-  res.redirect("https://dissuade.io");
-});
+// app.get("http://:request", (res, req) => {
+//   res.redirect("https://dissuade.io");
+// });
 
 //Serve static assets when in production
 if (process.env.NODE_ENV === "production") {
