@@ -2,6 +2,9 @@
   "name": "dissuade",
   "version": "1.0.0",
   "description": "A social media website for carefully constructed positions",
+  "engines": {
+    "node": "10.9.0"
+  },
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
