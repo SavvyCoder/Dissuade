@@ -32,6 +32,10 @@ app.use("/api/users", users);
 app.use("/api/posts", posts);
 app.use("/api/profile", profile);
 
+app.get("http://:request", (res, req) => {
+  res.redirect("https://dissuade.io");
+});
+
 //Serve static assets when in production
 if (process.env.NODE_ENV === "production") {
   //Set static folder
