@@ -36,6 +36,10 @@ app.get("http://:request", (res, req) => {
   res.redirect("https://dissuade.io");
 });
 
+app.get("www.dissuade.io", (res, req) => {
+  res.redirect("https://dissuade.io");
+});
+
 //Serve static assets when in production
 if (process.env.NODE_ENV === "production") {
   //Set static folder
