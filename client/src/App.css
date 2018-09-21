@@ -1,21 +1,3 @@
-img {
-  width: 100%;
-}
-
-.landing {
-  position: relative;
-  background: url('./img/showcase.jpg') no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  margin-top: -24px;
-  margin-bottom: -50px;
-}
-
-.landing-inner {
-  padding-top: 80px;
-}
-
 .dark-overlay {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
@@ -36,4 +18,56 @@ img {
 
 .form-control::placeholder {
   color: #bbb !important;
+}
+
+.dissuade-gradient {
+  background: linear-gradient(to right, #2d0249 0%, #000000 86%);
+}
+
+/*General Button Styles*/
+
+.btn {
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white !important;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+ }
+ 
+.btn:hover {
+  background-position:  right center !important;
+}
+
+/*Button info styles*/
+ 
+.btn-info {
+ background-image: linear-gradient(to right, #000000 0%, #53346D 51%, #000000 100%) !important;
+ border: none !important;
+}
+
+/*.btn-info:focus {*/
+/*  background-image: linear-gradient(to right, #2d0249  40%, #2c1456 71%, #000000 100%);*/
+/*  border: none;*/
+/*}*/
+
+/*.btn-info:active:focus {*/
+/*  background-image: linear-gradient(to right, #2d0249  40%, #2c1456 71%, #000000 100%) !important;*/
+/*  border: none !important;*/
+/*}*/
+
+
+/*Button light styles*/
+
+.btn-light {
+   background-image: linear-gradient(to right, #6441A5 0%, #2a0845 51%, #6441A5 100%) !important;
+   border: none !important;
+}
+
+/*Sign Up & Login Button*/
+.btn-custom {
+  background-image: linear-gradient(to right, #41295a 0%, #2F0743 51%, #41295a 100%) !important;
+  border: none !important;
+}
+
+.bg-custom {
+  background-image: linear-gradient(to right, #6441A5 0%, #2a0845 51%, #6441A5 100%) !important;
 }

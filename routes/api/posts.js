@@ -113,7 +113,7 @@ router.post(
 
         // Add user id to post like array
         post.likes.push({ user: req.user.id });
-        post.save.then(post => {
+        post.save().then(post => {
           res.json(post);
         });
       })

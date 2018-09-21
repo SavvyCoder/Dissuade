@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import propTypes from "prop-types";
 import { connect } from "react-redux";
-import { logoutUser } from "../../actions/authActions";
-import { clearCurrentProfile } from "../../actions/profileActions";
+import { logoutUser } from "../../../actions/authActions";
+import { clearCurrentProfile } from "../../../actions/profileActions";
+import classnames from "classnames";
+import "./Navbar.css";
 
 class Navbar extends Component {
   onLogoutClick = e => {
@@ -11,6 +13,27 @@ class Navbar extends Component {
     this.props.logoutUser();
     this.props.clearCurrentProfile();
   };
+
+  //   componentDidMount() {
+  //     // When the user scrolls the page, execute myFunction
+  //     window.onscroll = function() {myFunction()};
+
+  // // Get the navbar
+  // var navbar = document.getElementById("navbar");
+
+  // // Get the offset position of the navbar
+  // var sticky = navbar.offsetTop;
+
+  // // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  // function myFunction() {
+  //   if (window.pageYOffset >= sticky) {
+  //     navbar.classList.add("sticky")
+  //   } else {
+  //     navbar.classList.remove("sticky");
+  //   }
+  // }
+
+  //   }
 
   render() {
     const { isAuthenticated, user } = this.props.auth;
@@ -61,7 +84,7 @@ class Navbar extends Component {
     );
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4 dissuade-gradient sticky-top">
         <div className="container">
           <Link className="navbar-brand" to="/">
             Dissuade

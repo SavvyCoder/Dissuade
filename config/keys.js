@@ -1,4 +1,5 @@
-module.exports = {
-  mongoURI: "mongodb://savvy:banana94@ds227322.mlab.com:27322/dissuade",
-  jwtKey: "Hercules&Athena"
-};
+if (process.env.NODE_ENV === "production") {
+  module.exports = require("./keys_prod");
+} else {
+  module.exports = require("./keys_dev");
+}

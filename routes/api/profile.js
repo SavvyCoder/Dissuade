@@ -297,7 +297,7 @@ router.delete(
 // @desc    Delete education by ID
 // @access  Private
 
-router.post(
+router.delete(
   "/education/:edu_id",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
