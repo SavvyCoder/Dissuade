@@ -71,3 +71,7 @@
 .bg-custom {
   background-image: linear-gradient(to right, #6441A5 0%, #2a0845 51%, #6441A5 100%) !important;
 }
+
+.bg-custom-drkblue {
+  background-image: linear-gradient(to right, #141E30 0%, #243B55 51%, #141E30 100%) !important;
+}
