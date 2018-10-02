@@ -202,6 +202,16 @@ hr.style-seven:before { /* Not really supposed to work, but does */
     border-color: #FFFAF0;
 }
 
+hr.style-two {
+    border: 0;
+    height: 2px !important;
+    background-image: linear-gradient(to right, #ffffff, #f7f5f9, #efecf2, #e8e2eb, #e2d8e3) !important;
+}
+
 .quote {
 	color: #FFFAF0;
+}
+
+.title-image {
+	background-image: url(../../../img/showcase_boat_stars.jpg) !important;
 }

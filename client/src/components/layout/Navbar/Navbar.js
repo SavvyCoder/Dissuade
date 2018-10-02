@@ -106,6 +106,11 @@ class Navbar extends Component {
                   Profiles
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/features">
+                  Showcase
+                </Link>
+              </li>
             </ul>
             {isAuthenticated ? authLinks : guestLinks}
           </div>
